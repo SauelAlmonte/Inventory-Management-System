@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Project2 Inventory.cpp
         Menu.h
-        Menu.cpp)
+        Menu.cpp
+        SplitLineToArray.h)

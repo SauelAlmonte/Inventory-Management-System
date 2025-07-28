@@ -32,8 +32,7 @@ int main() {
     bool running = true;
 
     displayBanner();
-
-    showMenu();
+    cout << "Enter h for help menu or q to quit.\n";
 
     while (running) {
         cout << "Command: ";
@@ -41,6 +40,7 @@ int main() {
         command = static_cast<char>(tolower(command));
 
         if (command == 'q') {
+            cout << "Thank you for using the Inventory Management System. Come again.\n";
             running = false;
         } else {
             handleCommand(command, inventory, itemCount);
