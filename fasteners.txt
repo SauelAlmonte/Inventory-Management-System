@@ -1,0 +1,7 @@
+0|Turnbuckle|3.80|25
+1|Siding nails (box of 100)|4.00|20
+2|Flat washer (box of 100)|2.80|30
+3|Machine screw (box of 100)|3.20|10
+4|Hex bolt (box of 100)|6.50|23
+5|Hex nut (box of 100)|3.80|15
+6|Sheet Metal Screw (qty 100)|1.50|28

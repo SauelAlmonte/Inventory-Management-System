@@ -1,0 +1,6 @@
+0|Cable|5.00|18
+1|Extension Cord (14/3, 25 ft)|27.95|6
+2|Light switch (15 amp)|2.79|10
+3|Ceiling Fan (52 inch)|79.95|3
+4|Vinyl Electrical Tape (20 ft roll)|0.79|30
+5|GFI Tester|9.35|5

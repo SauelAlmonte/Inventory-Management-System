@@ -1,0 +1,6 @@
+0|Pump|39.00|20
+1|Gasket|1.50|29
+2|Water Level Guage|12.99|30
+3|Faucet Repair Kit|4.89|8
+4|Teflon Thread Seal Tape (50 ft roll)|3.30|12
+5|shutoff valve|6.50|10
