@@ -1,0 +1,28 @@
+# CLion & IDE project files
+.idea/
+.vscode/
+
+# CMake build files
+cmake-build-*/
+cmake-build-debug/
+cmake-build-release/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+*.cmake
+
+# Compiled binaries
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
