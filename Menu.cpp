@@ -1,6 +1,9 @@
 // Implementation File -> Menu.cpp
 #include "Menu.h"
+#include "InventoryItem.h"
 #include <iostream>
+#include <iomanip>
+#include <limits>
 
 using namespace std;
 
@@ -65,10 +68,58 @@ void outputToFile(const vector<InventoryItem>& inventory, int itemCount) {
     cout << "[outputToFile()] called - implementation pending.\n";
 }
 
-void printInventory(const vector<InventoryItem>& inventory, int itemCount) {
-    cout << "[printInventory()] called - implementation pending.\n";
+void printInventory(const vector<InventoryItem>& inventory, const int itemCount) {
+    cout << left << setw(10) << "Item Num"
+         << setw(45) << "Description"
+         << right << setw(8) << "Cost"
+         << setw(10) << "Quantity" << endl;
+
+    cout << string(73, '_') << endl;
+
+    for (int i = 0; i < itemCount; ++i) {
+        cout << left << setw(10) << i
+             << setw(45) << inventory[i].getDescription()
+             << right << fixed << setprecision(2)
+             << setw(8) << inventory[i].getCost()
+             << setw(10) << inventory[i].getUnits() << endl;
+    }
+
+    cout << itemCount << " record" << (itemCount == 1 ? ".\n" : "s.\n");
 }
 
 void createNewItem(vector<InventoryItem>& inventory, int& itemCount) {
-    cout << "[createNewItem()] called - implementation pending.\n";
+    if (itemCount >= 100) {
+        cout << "Error: Inventory is full (100 items max).\n";
+        return;
+    }
+
+    string desc;
+    double cost;
+    int units;
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // flush leftover input
+
+    cout << "Enter description for new Item: ";
+    getline(cin, desc);
+
+    cout << "Enter unit cost for new Item: ";
+    cin >> cost;
+
+    cout << "Enter initial quantity for the new Item: ";
+    cin >> units;
+
+    while (units < 0 || units > 30) {
+        cout << "ERROR: initial quantity must be between 0 - 30.\n"
+             << "Please enter an integer between 0 - 30: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> units;
+    }
+
+    inventory[itemCount] = InventoryItem(desc, cost, units);
+    cout << "Announcing a new inventory Item: " << desc << endl;
+
+    itemCount++;
+    cout << "We now have " << itemCount << " different inventory Item"
+         << (itemCount == 1 ? ".\n" : "s in stock!\n");
 }
