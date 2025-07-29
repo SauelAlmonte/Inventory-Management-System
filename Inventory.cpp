@@ -22,6 +22,7 @@
 
 #include <iostream>
 #include <string>
+#include <limits>
 #include <vector>
 #include <cctype>
 #include "InventoryItem.h"
