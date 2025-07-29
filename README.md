@@ -7,6 +7,7 @@ A modular C++ application for managing hardware inventory using file I/O, input 
 ### Author
 **Sauel Almonte**  
 [LinkedIn Profile](https://www.linkedin.com/in/sauel-almonte)
+<br>
 [My Portfolio](https://s-almonte.vercel.app/)
 
 ---
